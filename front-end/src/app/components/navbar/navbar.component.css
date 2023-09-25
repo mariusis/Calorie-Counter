@@ -1,0 +1,19 @@
+.fa-shopping-cart {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-inline > n {
+  margin: 0px 10px;
+}
