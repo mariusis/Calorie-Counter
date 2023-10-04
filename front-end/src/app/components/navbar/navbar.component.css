@@ -1,9 +1,29 @@
+.navbar {
+  background-color: white;
+}
+
 .fa-shopping-cart {
   display: flex;
   justify-content: center;
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+}
+
 .nav-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+.nav-auth-btns {
   display: flex;
   justify-content: space-evenly;
 }
