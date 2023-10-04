@@ -1,4 +1,4 @@
-package com.marius.security;
+package com.marius.calorie;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

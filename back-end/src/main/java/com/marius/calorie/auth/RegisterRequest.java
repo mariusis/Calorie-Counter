@@ -1,4 +1,4 @@
-package com.marius.security.auth;
+package com.marius.calorie.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

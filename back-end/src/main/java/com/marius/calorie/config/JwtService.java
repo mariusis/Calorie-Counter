@@ -1,4 +1,4 @@
-package com.marius.security.config;
+package com.marius.calorie.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

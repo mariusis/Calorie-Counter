@@ -1,4 +1,4 @@
-package com.marius.security.user;
+package com.marius.calorie.user;
 
 public enum Role {
     USER,

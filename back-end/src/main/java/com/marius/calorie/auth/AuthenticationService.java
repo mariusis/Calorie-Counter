@@ -1,9 +1,9 @@
-package com.marius.security.auth;
+package com.marius.calorie.auth;
 
-import com.marius.security.config.JwtService;
-import com.marius.security.user.Role;
-import com.marius.security.user.User;
-import com.marius.security.user.UserRepository;
+import com.marius.calorie.config.JwtService;
+import com.marius.calorie.user.Role;
+import com.marius.calorie.user.User;
+import com.marius.calorie.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

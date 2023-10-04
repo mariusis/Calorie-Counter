@@ -1,4 +1,4 @@
-package com.marius.security.demo;
+package com.marius.calorie.demo;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

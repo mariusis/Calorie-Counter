@@ -1,4 +1,4 @@
-package com.marius.security.user;
+package com.marius.calorie.user;
 
 
 import jakarta.persistence.*;

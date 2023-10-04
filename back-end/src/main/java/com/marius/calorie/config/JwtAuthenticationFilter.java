@@ -1,4 +1,4 @@
-package com.marius.security.config;
+package com.marius.calorie.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
