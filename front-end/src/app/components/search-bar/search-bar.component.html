@@ -1,0 +1,16 @@
+<div class="search-bar">
+  <input
+    type="text"
+    placeholder="Search..."
+    [(ngModel)]="searchTerm"
+    (input)="onSearchInput()"
+  />
+  <ul *ngIf="showSuggestions" class="suggestions">
+    <li
+      *ngFor="let suggestion of suggestionList"
+      (click)="selectSuggestion(suggestion)"
+    >
+      {{ suggestion }}
+    </li>
+  </ul>
+</div>

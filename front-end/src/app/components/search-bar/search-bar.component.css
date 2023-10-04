@@ -1,0 +1,33 @@
+.search-bar {
+  height: 100px;
+  display: flex;
+  flex-direction: column; /* Change the flex direction to column */
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 60%;
+  height: 40px;
+  font-size: 20px;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 60%;
+
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
