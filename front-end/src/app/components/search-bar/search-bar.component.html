@@ -1,16 +1,19 @@
 <div class="search-bar">
-  <input
-    type="text"
-    placeholder="Search..."
-    [(ngModel)]="searchTerm"
-    (input)="onSearchInput()"
-  />
+  <form (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="searchTerm"
+      placeholder="Search..."
+      [(ngModel)]="searchTerm"
+      (input)="onSearchInput()"
+    />
+  </form>
   <ul *ngIf="showSuggestions" class="suggestions">
     <li
       *ngFor="let suggestion of suggestionList"
       (click)="selectSuggestion(suggestion)"
     >
-      {{ suggestion }}
+      {{ suggestion.foodName }}
     </li>
   </ul>
 </div>
