@@ -1,0 +1,63 @@
+<div class="main-container">
+  <div class="login-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          [(ngModel)]="registerRequest.firstName"
+          required
+          placeholder="Insert First Name Here"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          [(ngModel)]="registerRequest.lastName"
+          required
+          placeholder="Insert Last Name Here"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          [(ngModel)]="registerRequest.email"
+          required
+          placeholder="Insert Email Here"
+        />
+        <div class="alert alert-danger small-alert" *ngIf="invalidEmailFormat">
+          Invalid email format. Please enter a valid email address.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="registerRequest.password"
+          required
+          placeholder="Insert Password Here"
+        />
+        <div
+          class="alert alert-danger small-alert"
+          *ngIf="invalidPasswordFormat"
+        >
+          Password does not meet the strength criteria. Please use at least one
+          uppercase letter, one digit, and be at least 6 characters long.
+        </div>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already registered? <a routerLink="/login">Login here.</a></p>
+  </div>
+</div>

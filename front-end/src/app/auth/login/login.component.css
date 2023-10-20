@@ -1,7 +1,13 @@
 /* Add your CSS styles here */
-
+.main-container {
+  margin: 10% 0%;
+}
+h2 {
+  font-size: 50px;
+}
 .login-container {
-  width: 300px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -16,17 +22,19 @@
 
 .form-group {
   margin-bottom: 20px;
+  width: 90%;
 }
 
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 25px;
 }
 
 input[type="text"],
 input[type="password"] {
-  width: 95%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -43,6 +51,8 @@ button[type="submit"] {
   cursor: pointer;
 }
 form {
+  width: 100%;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -8,14 +8,34 @@
       />
     </div>
     <div class="nav-btns col-9">
-      <button class="btn btn-outline-primary text-primary">Button</button>
-      <button class="btn btn-outline-primary text-primary">Button</button>
-      <button class="btn btn-outline-primary text-primary">Button</button>
-      <button class="btn btn-outline-primary text-primary">Button</button>
+      <button class="btn btn-outline-primary text-primary">About us</button>
+      <button class="btn btn-outline-primary text-primary">Offers</button>
+      <button class="btn btn-outline-primary text-primary">Donate</button>
     </div>
-    <div class="nav-auth-btns col-2">
-      <button class="btn btn-outline-primary text-primary">Login</button>
-      <button class="btn btn-outline-primary text-primary">Sign Up</button>
+    <div *ngIf="!isLoggedIn" class="nav-auth-btns col-2">
+      <button
+        class="btn btn-outline-primary text-primary auth-btn"
+        [routerLink]="['/login']"
+      >
+        Login
+      </button>
+      <button
+        class="btn btn-outline-primary text-primary auth-btn"
+        [routerLink]="['/register']"
+      >
+        Sign up
+      </button>
+    </div>
+    <div *ngIf="isLoggedIn" class="nav-auth-btns col-2">
+      <button class="btn btn-outline-primary text-primary auth-btn">
+        User
+      </button>
+      <button
+        class="btn btn-outline-primary text-primary auth-btn"
+        (click)="logOut()"
+      >
+        Log Out
+      </button>
     </div>
   </nav>
 </div>
