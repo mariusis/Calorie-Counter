@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface FoodRepository extends JpaRepository<Food,Integer> {
 
     public List<Food> findByFoodNameContaining(String food);
+    public Food findByFoodId(int foodId);
 }

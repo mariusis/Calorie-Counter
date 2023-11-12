@@ -8,12 +8,13 @@
       (input)="onSearchInput()"
     />
   </form>
-  <ul *ngIf="showSuggestions" class="suggestions">
+
+  <ul class="suggestions">
     <li
       *ngFor="let suggestion of suggestionList"
       (click)="selectSuggestion(suggestion)"
     >
-      {{ suggestion.foodName }}
+      {{ suggestion.foodId }} {{ suggestion.foodName }}
     </li>
   </ul>
 </div>

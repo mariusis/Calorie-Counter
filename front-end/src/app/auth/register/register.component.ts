@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { User } from '../user.model';
+import { User } from '../../models/user.model';
 import { RegisterRequest } from './registerRequest.model';
 
 @Component({

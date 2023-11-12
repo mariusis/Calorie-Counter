@@ -1,4 +1,5 @@
-export interface FoodDisplay {
+export interface Food {
+  foodId: number;
   foodName: string;
   category?: string;
   grams?: number;

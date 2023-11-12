@@ -1,17 +1,17 @@
 .food-display {
   border: 1px solid #ccc;
   padding: 20px;
-  margin: 10px;
+
   background-color: #f9f9f9;
   border-radius: 5px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 300px;
-  margin: 20px auto;
+  margin: 0px auto;
 }
 
 .food-name {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   margin: 8px 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .display-label {

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginRequest } from './loginRequest.model';
-import jwt_decode from 'jwt-decode';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 

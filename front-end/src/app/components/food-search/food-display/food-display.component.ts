@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FoodDisplay } from './food-display.model';
+import { Food } from '../../../models/food.model';
 import { SearchService } from 'src/app/services/search.service';
 @Component({
   selector: 'app-food-display',
@@ -8,7 +8,7 @@ import { SearchService } from 'src/app/services/search.service';
   styleUrls: ['./food-display.component.css'],
 })
 export class FoodDisplayComponent {
-  foodDisplay: FoodDisplay = {} as FoodDisplay;
+  foodDisplay: Food = {} as Food;
 
   constructor(private searchService: SearchService) {}
 

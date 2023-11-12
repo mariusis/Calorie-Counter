@@ -1,0 +1,33 @@
+<div class="search-bar">
+  <form (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      id="searchTerm"
+      name="searchTerm"
+      placeholder="Search..."
+      [(ngModel)]="searchTerm"
+      (input)="onSearchInput()"
+    />
+
+    <ul class="suggestions">
+      <li
+        *ngFor="let suggestion of suggestionList"
+        (click)="selectSuggestion(suggestion)"
+        [class.selected]="suggestion === selectedSuggestion"
+      >
+        {{ suggestion.foodId }} {{ suggestion.foodName }}
+      </li>
+    </ul>
+    <div class="quanityField">
+      <input
+        type="text"
+        id="quantity"
+        name="quantity"
+        [(ngModel)]="quantity"
+        required
+      />
+      <a>grams</a>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>

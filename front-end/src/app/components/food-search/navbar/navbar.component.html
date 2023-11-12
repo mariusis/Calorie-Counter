@@ -8,9 +8,14 @@
       />
     </div>
     <div class="nav-btns col-9">
+      <button
+        [routerLink]="['/diary']"
+        class="btn btn-outline-primary text-primary"
+      >
+        Diary
+      </button>
       <button class="btn btn-outline-primary text-primary">About us</button>
       <button class="btn btn-outline-primary text-primary">Offers</button>
-      <button class="btn btn-outline-primary text-primary">Donate</button>
     </div>
     <div *ngIf="!isLoggedIn" class="nav-auth-btns col-2">
       <button
