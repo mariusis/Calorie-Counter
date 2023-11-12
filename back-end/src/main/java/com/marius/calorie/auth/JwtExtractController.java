@@ -28,6 +28,15 @@ public class JwtExtractController {
         return ResponseEntity.ok(user);
     }
 
+    @GetMapping("/extractUserId")
+    public ResponseEntity<Integer> extractUserId(@RequestHeader("Authorization") String authorizationHeader) {
+
+        String token = authorizationHeader.replace("Bearer ", "");
+
+        return ResponseEntity.ok(jwtService.getUserId(token));
+    }
+
+
 
 
 }

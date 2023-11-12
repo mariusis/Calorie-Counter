@@ -1,26 +1,53 @@
 package com.marius.calorie.config;
 
+import com.marius.calorie.user.User;
+import com.marius.calorie.user.UserRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 
 @Service
+@RequiredArgsConstructor
 public class JwtService {
+
+    private final UserRepository userRepository;
 
     private static final String SECRET_KEY = "404E635266556A586e3272357538782F4134428472B4B6250645367566B5970";
 
     public String extractUsername(String token){
         return extractClaim(token,Claims::getSubject);
+    }
+
+    public int getUserId(String token) {
+
+        String username = this.extractUsername(token);
+
+        // Check if the username is not null (or handle accordingly)
+        if (username != null) {
+            // Use the username to find the user in the repository
+            Optional<User> userOptional = userRepository.findByEmail(username);
+
+            // If the user is found, return the user's ID
+            if (userOptional.isPresent()) {
+                return userOptional.get().getId();
+            }
+        }
+
+        // If the username is null or the user is not found, return a suitable value (e.g., -1)
+        return -1;
     }
 
     public <T> T extractClaim(String token, Function<Claims,T> claimsResolver){
